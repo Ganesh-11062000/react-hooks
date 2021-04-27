@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import ClassCounter from "./components/Counter/ClassCounter";
-import HookCounter from "./components/Counter/HookCounter";
+import HookCounterTwo from "./components/Counter/HookCounterTwo";
 
 export class App extends Component {
 
   render() {
     return (
       <div>
-        {/* <ClassCounter /> */}
-        <HookCounter />
+          <HookCounterTwo/>
       </div>
     );
   }
