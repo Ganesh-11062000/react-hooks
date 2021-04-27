@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import HookCounterFour from "./components/Counter/HookCounterFour";
-
+import ClassComponent from "./components/useEffectComponents/ClassComponent";
 
 export class App extends Component {
+
 
   render() {
     return (
       <div>
-          <HookCounterFour/>
+        <ClassComponent/>
       </div>
     );
   }
