@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HookCounterThree from "./components/Counter/HookCounterThree";
+import HookCounterFour from "./components/Counter/HookCounterFour";
 
 
 export class App extends Component {
@@ -7,7 +7,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-          <HookCounterThree/>
+          <HookCounterFour/>
       </div>
     );
   }
