@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import IntervalClassCounter from "./components/useEffectComponents/IntervalClassCounter";
+import IntervalHookCounter from "./components/useEffectComponents/IntervalHookCounter";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <IntervalClassCounter/>
+        <IntervalHookCounter/>
       </div>
     );
   }
