@@ -15,7 +15,7 @@ function MouseContainer() {
         </button>
       </div>
       {/* {display && <HookMouse />} */}
-      {display && <ClassMouse/>}
+      {display && <HookMouse />}
     </div>
   );
 }

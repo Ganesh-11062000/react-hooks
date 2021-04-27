@@ -7,6 +7,10 @@ function HookMouse() {
   useEffect(() => {
       console.log("mouse moved");
       window.addEventListener("mousemove",logMousePosition);
+      return () => {
+          console.log("umounting component");
+          window.removeEventListener("mousemove",logMousePosition);
+      }
   },[]);
 
   const logMousePosition = e => {
