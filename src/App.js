@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import HookMouse from "./components/useEffectComponents/HookMouse";
+import MouseContainer from "./components/useEffectComponents/MouseContainer";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <HookMouse />
+        <MouseContainer/>
       </div>
     );
   }
