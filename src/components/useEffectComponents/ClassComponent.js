@@ -5,6 +5,7 @@ export class ClassComponent extends Component {
     super(props);
     this.state = {
       count: 0,
+      name: "",
     };
   }
 
@@ -12,8 +13,16 @@ export class ClassComponent extends Component {
     document.title = `Clicked ${this.state.count} times`;
   }
 
-  componentDidUpdate() {
-    document.title = `Clicked ${this.state.count} times`;
+  componentDidUpdate(prevProps, prevState) {
+
+    // this will update document title only if count variable changes
+    if (prevState.count !== this.state.count) {
+      console.log("Updating document title");
+      document.title = `Clicked ${this.state.count} times`;
+    }
+
+    // console.log("Updating document title");
+    // document.title = `Clicked ${this.state.count} times`;
   }
 
   incrementCount = () => {
@@ -24,8 +33,13 @@ export class ClassComponent extends Component {
 
   render() {
     return (
-      <div className="d-flex justify-content-center">
-        <button className="btn btn-primary mt-5" onClick={this.incrementCount}>
+      <div className="d-flex flex-column w-25 m-auto ">
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={(e) => this.setState({ name: e.target.value })}
+        />
+        <button className="btn btn-primary mt-2" onClick={this.incrementCount}>
           clicked {this.state.count} times
         </button>
       </div>
