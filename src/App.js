@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import MouseContainer from "./components/useEffectComponents/MouseContainer";
+import IntervalClassCounter from "./components/useEffectComponents/IntervalClassCounter";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <MouseContainer/>
+        <IntervalClassCounter/>
       </div>
     );
   }
