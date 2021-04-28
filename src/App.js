@@ -1,18 +1,11 @@
 import React, { Component } from "react";
-import ComponentD from "./components/useContextHook/ComponentD";
-
-export const userContext = React.createContext();
-export const channelContext = React.createContext();
+import CounterOne from "./components/useReducer/CounterOne";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <channelContext.Provider value={"Codevolution"}>
-          <userContext.Provider value={"Ganesh"}>
-            <ComponentD />
-          </userContext.Provider>
-        </channelContext.Provider>
+        <CounterOne />
       </div>
     );
   }

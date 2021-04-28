@@ -8,7 +8,7 @@ function DataFetching() {
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .get(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
       .then((res) => {
         console.log(res);
         setPost(res.data);
@@ -17,6 +17,7 @@ function DataFetching() {
         console.log(err.message);
       });
   }, [idFromButtonClick]);
+  // solved the dependency issue!
 
   const handleClick = () => {
     if (id !== "") {
