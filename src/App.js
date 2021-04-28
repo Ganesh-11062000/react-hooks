@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import CounterTwo from "./components/useReducer/CounterTwo";
+import CounterThree from "./components/useReducer/CounterThree";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <CounterTwo />
+        <CounterThree />
       </div>
     );
   }
