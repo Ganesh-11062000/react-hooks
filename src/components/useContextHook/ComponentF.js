@@ -1,15 +1,27 @@
-import React from 'react';
-import {userContext} from "../../App";
+import React from "react";
+import { userContext, channelContext } from "../../App";
 
 function ComponentF() {
-    return (
-        <div>
-            component F
+  return (
+    <div className="text-center">
+      component F
+      <channelContext.Consumer>
+        {(channel) => {
+          return (
             <userContext.Consumer>
-                {user => <h1>Your name is {user}</h1>}
+              {(user) => {
+                return (
+                  <h1>
+                    {user} is learning from {channel} channel
+                  </h1>
+                );
+              }}
             </userContext.Consumer>
-        </div>
-    )
+          );
+        }}
+      </channelContext.Consumer>
+    </div>
+  );
 }
 
-export default ComponentF
+export default ComponentF;
