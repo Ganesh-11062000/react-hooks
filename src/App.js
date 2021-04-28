@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import IntervalHookCounter from "./components/useEffectComponents/IntervalHookCounter";
+import DataFetching from "./components/DataFetchingFromAPI/DataFetching";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <IntervalHookCounter/>
+        <DataFetching />
       </div>
     );
   }
